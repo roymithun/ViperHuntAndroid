@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import coil.load
 import com.inhouse.viperhuntandroid.R
 import com.inhouse.viperhuntandroid.app.models.Media
 import com.inhouse.viperhuntandroid.databinding.MediaListItemBinding
@@ -18,13 +17,10 @@ class MediaListAdapter(private val itemClickListener: ItemClickListener) :
         fun bind(media: Media) {
             binding.tvArtistName.text = media.artistName
             binding.tvTrackName.text = media.trackName
-            Glide.with(binding.ivArtistThumbnail.context)
-                .load(media.artworkUrl100).apply {
-                    RequestOptions()
-                        .placeholder(R.drawable.loading_animation)
-                        .error(R.drawable.ic_broken_image)
-                }
-                .into(binding.ivArtistThumbnail)
+            binding.ivArtistThumbnail.load(media.artworkUrl100) {
+                placeholder(R.drawable.loading_animation)
+                error(R.drawable.ic_broken_image)
+            }
         }
     }
 
