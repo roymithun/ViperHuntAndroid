@@ -1,4 +1,4 @@
-package com.inhouse.viperhuntandroid.ui.medialist.data
+package com.inhouse.viperhuntandroid.ui.medialist.repo
 
 import com.inhouse.viperhuntandroid.app.models.MediaList
 import com.inhouse.viperhuntandroid.ui.medialist.MediaListContract

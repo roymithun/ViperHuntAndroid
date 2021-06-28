@@ -3,7 +3,7 @@ package com.inhouse.viperhuntandroid.ui.medialist.di
 import com.inhouse.viperhuntandroid.app.di.ActivityScope
 import com.inhouse.viperhuntandroid.ui.medialist.*
 import com.inhouse.viperhuntandroid.ui.medialist.api.MediaListApi
-import com.inhouse.viperhuntandroid.ui.medialist.data.MediaListRepo
+import com.inhouse.viperhuntandroid.ui.medialist.repo.MediaListRepo
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

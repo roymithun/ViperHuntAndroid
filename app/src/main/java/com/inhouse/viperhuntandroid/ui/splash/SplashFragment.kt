@@ -16,7 +16,9 @@ class SplashFragment : Fragment(), SplashContract.View {
     lateinit var presenter: SplashPresenter
 
     private val splashComponent: SplashComponent by lazy {
-        (requireActivity().application as BaseApplication).appComponent.splashComponent()
+        (requireActivity().application as BaseApplication)
+            .appComponent
+            .splashComponent()
             .create(this)
     }
 
